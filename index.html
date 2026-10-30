@@ -86,18 +86,19 @@
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
         }
 
-        /* عرض مشغل يوتيوب السريع */
+        /* عرض فيديو الشورتس الطولي بطريقة متناسقة جداً للموبايل */
         .media-box {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* نسبة عرض 16:9 متناسقة للموبايل */
+            max-width: 320px; /* أقصى عرض متناسق للفيديو الطولي */
+            margin: 20px auto;
+            padding-bottom: 177.77%; /* نسبة أبعاد الفيديو الطولي 9:16 */
             height: 0;
-            border-radius: 18px;
+            border-radius: 20px;
             overflow: hidden;
-            margin: 20px 0;
             box-shadow: 0 10px 30px rgba(0,0,0,0.6);
             background: #000;
-            border: 2px solid rgba(255, 215, 0, 0.3);
+            border: 2px solid rgba(255, 215, 0, 0.4);
         }
 
         .media-box iframe {
@@ -107,7 +108,7 @@
             width: 100%;
             height: 100%;
             border: 0;
-            border-radius: 18px;
+            border-radius: 20px;
         }
 
         /* مشغل الصوت */
@@ -252,9 +253,9 @@
             <button class="btn-surprise" onclick="triggerExtraFireworks()">✨4/11/2008✨</button>
         </div>
 
-        <!-- عرض الفيديو من يوتيوب (استبدل YOUR_VIDEO_ID بكود فيديو اليوتيوب الخاص بك) -->
+        <!-- عرض الفيديو الطولي (Shorts) -->
         <div class="media-box">
-            <iframe src="https://youtube.com/shorts/MR2II2uAxOU?si=QKvBUUuslDZ_2eeK" 
+            <iframe src="https://www.youtube.com/embed/MR2II2uAxOU" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
             </iframe>
@@ -268,7 +269,7 @@
             </audio>
         </div>
 
-        <!-- كروت التهنئة والذكريات المحدثة -->
+        <!-- كروت التهنئة والذكريات -->
         <div class="cards-grid">
             <div class="card">
                 <span class="card-icon">🎂</span>
