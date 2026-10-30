@@ -71,28 +71,34 @@
             font-weight: bold;
         }
 
-        /* 👑 تصميم اسم حماده المميز والفخم 👑 */
+        /* 👑 خط اسم حماده الفخم والمطور 👑 */
         .from-text {
-            font-family: 'Arial Black', Gadget, sans-serif;
-            font-size: 2rem;
+            font-family: 'Cairo', 'Tajawal', 'Arial Black', sans-serif;
+            font-size: 2.2rem;
             font-weight: 900;
-            letter-spacing: 2px;
-            background: linear-gradient(45deg, #ff416c, #ff4b2b, #ffd700);
+            letter-spacing: 3px;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b, #ffd700, #00f2fe);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-top: 15px;
             display: inline-block;
-            text-shadow: 0px 0px 20px rgba(255, 65, 108, 0.6);
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+            text-shadow: 0px 0px 25px rgba(255, 65, 108, 0.5);
+            filter: drop-shadow(0 3px 6px rgba(0,0,0,0.6));
+            animation: nameGlow 3s infinite alternate;
         }
 
-        /* عرض فيديو الشورتس الطولي بطريقة متناسقة جداً للموبايل */
+        @keyframes nameGlow {
+            0% { filter: drop-shadow(0 2px 4px rgba(255, 65, 108, 0.4)); }
+            100% { filter: drop-shadow(0 4px 15px rgba(255, 215, 0, 0.8)); }
+        }
+
+        /* عرض الفيديو الطولي (Shorts) */
         .media-box {
             position: relative;
             width: 100%;
-            max-width: 320px; /* أقصى عرض متناسق للفيديو الطولي */
+            max-width: 320px;
             margin: 20px auto;
-            padding-bottom: 177.77%; /* نسبة أبعاد الفيديو الطولي 9:16 */
+            padding-bottom: 177.77%;
             height: 0;
             border-radius: 20px;
             overflow: hidden;
@@ -155,7 +161,7 @@
             transform: scale(0.95);
         }
 
-        /* تصميم الكروت المطور */
+        /* ✨ تصميم الكروت الفاخر والحديث ✨ */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -164,21 +170,21 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 18px 12px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+            border-radius: 20px;
+            padding: 20px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
             font-size: 1rem;
             font-weight: bold;
             color: #ffffff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
             position: relative;
             overflow: hidden;
         }
@@ -190,8 +196,8 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+            transition: 0.6s;
         }
 
         .card:hover::before {
@@ -199,15 +205,16 @@
         }
 
         .card:hover, .card:active {
-            transform: translateY(-8px) scale(1.03);
-            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-8px) scale(1.04);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 65, 108, 0.15));
             border-color: #ffd700;
-            box-shadow: 0 12px 25px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.35);
         }
 
         .card-icon {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             margin-bottom: 2px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
         }
 
         /* الألعاب النارية والبلونات */
@@ -255,7 +262,7 @@
 
         <!-- عرض الفيديو الطولي (Shorts) -->
         <div class="media-box">
-            <iframe src="https://www.youtube.com/embed/MR2II2uAxOU" 
+            <iframe src="https://www.youtube.com/embed/MR2II2uAxOU?rel=0&modestbranding=1" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
             </iframe>
@@ -263,13 +270,13 @@
 
         <!-- الأغنية -->
         <div class="music-section">
-            <h3>🎵 أغنية الاحتفال (من قلب الأسطى قريب)</h3>
+            <h3>🎵 [الفديو ممكن ياخد وقت عقبال ما يشتغل)</h3>
             <audio id="audioPlayer" controls autoplay loop src="audio.mp3.mp3">
                 متصفحك لا يدعم مشغل الصوت.
             </audio>
         </div>
 
-        <!-- كروت التهنئة والذكريات -->
+        <!-- كروت التهنئة بتصميمها الفاخر الجديد -->
         <div class="cards-grid">
             <div class="card">
                 <span class="card-icon">🎂</span>
